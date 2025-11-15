@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fdf3dd;  /* Cream */
+  --foreground: #0a2a43;  /* Navy blue text */
+  --font-winky: 'Winky', sans-serif;
 }
 
 @theme inline {
@@ -11,16 +12,34 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* utility class for font winky */
+.winky-font {
+  font-family: 'Winky Sans', sans-serif;
 }
 
+/* globals.css */
+.winky-sans {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Regular weight */
+}
+
+.winky-sans-thin {
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 300; /* Thinner weight */
+}
+
+.winky-sans-bold {
+  font-family: "Winky Sans", sans-serif;
+  font-weight: 700; /* Bold weight */
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-winky);
 }
